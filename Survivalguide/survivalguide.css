@@ -1,0 +1,779 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+svg {
+    position: absolute;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+    visibility: hidden;
+}
+
+header, nav, .navbar, .nav-links, .logo {
+    vertical-align: top;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: transform 0.3s ease-in-out;
+}
+
+header.nav-hidden {
+    transform: translateY(-100%);
+}
+
+header.scrolled .navbar {
+    background-color: rgb(139, 98, 73); /* Muutub tumedamaks */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    padding: 5px 40px; /* Muutub veidi kitsamaks (compact mode) */
+    transition: all 0.3s ease;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    /* Muudame tausta väga läbipaistvaks, et pilt paistaks läbi */
+    background-color: rgba(126, 49, 5, 0.2); 
+}
+
+.logo {
+    padding: 1px 1px;
+    font-weight: bold;
+    color: white;
+}
+
+.logo a {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+}
+
+.logo img {
+    display: block; /* Eemaldab pildi all oleva nähtamatu tühimiku */
+    margin: 0;
+    width: 12%;
+    height: auto;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0; /* Oluline! */
+    padding: 0; /* Oluline! */
+    align-items: center;
+    font-size: 13px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    position: relative;
+    font-family: 'Shadows Into Light', cursive;
+    padding: 12px 19px;
+    border-radius: 5px;
+    color: #ffffff;
+    background-color: rgba(126, 49, 5, 0.404);
+    font-weight: 500;
+    display: inline-block
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #ffffff;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.nav-links a:hover {
+    background-color: rgba(163, 71, 18, 0.4); /* Muudab värvi veidi heledamaks/erksamaks */
+    transform: translateY(-2px); /* Tõstab nuppu visuaalselt 2 pikslit ülespoole */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Suurendab varju, rõhutades tõusmist */
+    text-decoration: none; 
+}
+
+/* HERO SECTION */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 50vh; /* Võtab kogu ekraani kõrguse */
+    background: url("/Pildid/pilt.png") center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-align: center;
+    
+    /* LAHENDUS: määrame kasti laiuse, et see ei veniks tulbaks */
+    width: fit-content;
+    max-width: 600px; 
+    
+    background-color: rgba(112, 38, 15, 0.6);
+    padding: 40px 60px;
+    border-radius: 12px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-top: 20px;
+    font-weight: 300;
+    font-family: 'Shadows Into Light', cursive;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    text-shadow: 
+        1px 1px 0px rgba(0,0,0,0.2),
+        -1px -1px 0px rgba(0,0,0,0.1);
+    filter: url(#rough);
+}
+
+/* WHITE CONTENT SECTION */
+.content {
+    background: #f3f3f3;
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.content-inner {
+    max-width: 900px;
+    background: white;
+    padding: 50px;
+    text-align: center;
+}
+
+.columns {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 60px;
+}
+
+/* ALLALAADIMISE NUPP */
+.download-btn {
+    display: inline-block; /* Teeb tekstilingist nupu kujulise ploki */
+    background-color: rgba(126, 49, 5, 0.8); /* Sinu lehe teemaga sobiv värv */
+    color: #ffffff;
+    text-decoration: none; /* Eemaldab lingi allakriipsutuse */
+    padding: 12px 25px; /* Tekitab teksti ümber ruumi (üleval/all 12px, külgedel 25px) */
+    font-size: 16px;
+    font-family: Arial, sans-serif; /* Võid muuta ka 'Shadows Into Light', cursive peale */
+    font-weight: bold;
+    border-radius: 8px; /* Ümarad nurgad */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Õrn vari nupu alla ruumilisuse jaoks */
+    
+    /* Sujuv üleminek, kui hiirega peale minna */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* NUPU EFEKT HIIREGA PEALE MINNES */
+.download-btn:hover {
+    background-color: rgba(163, 71, 18, 0.9); /* Muudab värvi veidi heledamaks/erksamaks */
+    transform: translateY(-2px); /* Tõstab nuppu visuaalselt 2 pikslit ülespoole */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Suurendab varju, rõhutades tõusmist */
+    text-decoration: none; 
+}
+
+/* NUPU EFEKT KLIKKIMISE HETKEL */
+.download-btn:active {
+    transform: translateY(0); /* Vajutades vajub nupp tagasi alla */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Vari muutub väiksemaks */
+}
+
+/* Ühised stiilid kõigile .l-klassidele loetavuse ja korduste vältimiseks */
+.l1, .l2, .l3, .l4, .l5, .l6, .l7, .l8, .l9, .l10, .l11, .l12 {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+.l1 h1, .l2 h1, .l3 h1, .l12 h1 {
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: 24px;
+}
+
+.l5 h1, .l6 h1, .l7 h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.l8 h1, .l9 h1, .l10 h1, .l11 h1 {
+    text-align: left;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.l4 h1 {
+    text-align: left;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.l5 h2, .l6 h2, .l10 h2, .l11 h2 {
+    text-align: left;
+    margin-bottom: 10px;
+    font-size: 16px; /* l5 h2 oli varem 20px, ühtlustasin */
+    color: #333;
+}
+
+.l1 p, .l2 p, .l3 p {
+    text-align: center;
+    line-height: 1.6;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.l5 p, .l6 p, .l7 p, .l8 p, .l9 p, .l10 p, .l11 p {
+    text-align: left;
+    line-height: 1.6;
+    max-width: 1000px;
+    margin: 0;
+}
+
+.l8, .l9, .l10, .l11 {
+    margin-left: 0;
+    text-align: left;
+}
+
+.soo {
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ATRAKTSIOONI KONTEINER */
+.t1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 60px;
+    text-align: left;
+}
+
+/* Pildi konteiner */
+.pilt {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.pilt img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* IMAGE SECTION (parallax style) */
+.image-section {
+    height: 900px;
+    background: url("/Pildid/pilt.png") center/cover fixed no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-overlay {
+    background: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.video {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 40px;
+}
+
+.schedule {
+    color: white;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    max-width: 1000px;
+    padding: 0 20px;
+}
+
+.schedule h3 {
+    margin-bottom: 5px;
+    font-size: 24px;
+    font-weight: 300;
+    font-family: 'Shadows Into Light', cursive;
+}
+
+.schedule h4 {
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 300;
+    font-family: 'Shadows Into Light', cursive;
+}
+
+.schedule p {
+    margin-top: 30px;
+    font-size: 28px;
+    line-height: 1.6;
+}
+
+.footer {
+    height: auto;
+    width: 100%;
+    background-color: rgb(139, 98, 73);
+    padding: 20px 20px 20px 20px;
+    font-family: 'Shadows Into Light', cursive;
+}
+
+.footer-container {
+    background-color: rgba(0, 0, 0, 0);
+    margin: 0 auto;
+    display: flex;
+    justify-content: center; /* Lükkab kõik veerud lehe keskele */
+    flex-wrap: wrap;
+    gap: 60px; /* Panin vahe veidi suuremaks, et veerud ei oleks liiga pead-jalad koos */
+}
+
+/* 1. VEERG (Logo ja nimi) - Joondab sisu keskele */
+.footer-content {
+    flex: 1;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* ÜLEJÄÄNUD VEERUD (Kontakt, Sotsiaalmeedia, Partnerid) - Joondab sisu keskele */
+.footer-col {
+    flex: 1;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-logo {
+    width: 100px;
+    height: auto;
+}
+
+/* Pealkirjad */
+.footer-heading {
+  color: #ffffff;
+  font-size: 16px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.footer-nimi {
+  font-size: 20px;
+  color: #ffffff;
+  margin-top: 15px;
+}
+
+/* Tekst ja nimekirjad */
+.footer-text {
+  font-size: 14px;
+  color: #ffffff;
+  margin-top: 15px;
+}
+
+.contact-list {
+  list-style: none; /* Eemaldab täpid */
+  padding: 0;
+  margin: 0;
+}
+
+/* Kontaktide ridade tsentreerimine */
+.contact-list li {
+  margin-bottom: 12px;
+  font-size: 14px;
+  display: flex;
+  align-items: center; 
+  justify-content: center; /* Lükkab ikooni ja teksti veeru keskele */
+  color: #ffffff;
+}
+
+.contact-list .icon {
+  margin-right: 10px;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+/* Sotsiaalmeedia ringide tsentreerimine */
+.social-icons {
+  display: flex;
+  gap: 15px;
+  justify-content: center; /* Lükkab nupud veeru keskele */
+}
+
+.social-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #d8d8d8; /* Nupu tumehall taust */
+  color: #fff;
+  border-radius: 50%; /* Teeb nupu ümmarguseks */
+  text-decoration: none;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.social-circle:hover {
+  background-color: #b9b9b9; /* Hover efekt */
+  transform: translateY(-2px);
+}
+
+/* Partnerite piltide tsentreerimine */
+.partner-logos {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center; /* Lükkab logod veeru keskele */
+}
+
+.partner-logos img {
+  max-width: 100px; /* Piirab logode suurust */
+  height: auto;
+}
+
+/* Alumine joon ja copyright */
+.footer-bottom {
+  max-width: 1600px;
+  margin: 40px auto 0 auto;
+  padding-top: 20px;
+  border-top: 1px solid #e9e9e9; 
+  text-align: center;
+  font-size: 13px;
+  color: #ffffff;
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    width: 35px;
+    height: auto;
+    transition: transform 0.2s ease;
+}
+
+.menu-toggle:active {
+    transform: scale(0.9);
+}
+
+.menu-toggle img {
+    width: 100%;
+    display: block;
+    /* Kui ikoon on pildil must, siis see rida muudab selle valgeks, et sobida navbariga */
+    filter: brightness(0) invert(1);
+}
+
+/* NAVBARI MUUDATUSED ALATES 1000px */
+@media (max-width: 1000px) {
+    .navbar {
+        padding: 10px 20px; /* Vähendame veidi ääri */
+    }
+
+    .menu-toggle {
+        display: block; /* Näitame ikooni */
+        order: 2; /* Viib ikooni paremale poole */
+    }
+
+    .logo {
+        order: 1;
+    }
+
+    .nav-links {
+        display: flex;
+        position: absolute;
+        top: 100%;
+        right: 0;           /* Menüü joondub paremale serva */
+        width: auto;         /* Laius kohandub sisu järgi */
+        min-width: 200px;    /* Tagab, et menüü pole liiga kitsas */
+        background-color: rgb(139, 98, 73);
+        flex-direction: column;
+        gap: 0;
+        padding: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease-in-out;
+        box-shadow: -5px 5px 15px rgba(0,0,0,0.3); /* Vari ainult vasakul ja all */
+        z-index: 999;
+    }
+
+    .nav-links.active {
+        max-height: 600px;
+        padding: 10px 0;    /* Lisab veidi ruumi üles ja alla */
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 15px 40px !important; /* Suurem padding külgedel määrab menüü laiuse */
+        background-color: transparent !important;
+        border-radius: 0;
+        text-align: center;
+        white-space: nowrap; /* Keelab teksti murdmise mitmele reale */
+        font-size: 18px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-links li:last-child a {
+        border-bottom: none;
+    }
+
+    .nav-links a::after {
+        display: none; /* Eemaldame hover-joone mobiilis */
+    }
+}
+
+/* =========================================
+   RESPONSIVE KÕIKIDELE MOBIILIVAADETELE 
+   ========================================= */
+@media (max-width: 768px) {
+        /* HERO SECTION */
+    .hero {
+        height: 60vh; /* Muudame kõrguse mobiilis veidi suuremaks, et tekst mahuks ära */
+        background-attachment: scroll; /* Mobiilis on scroll sujuvam kui fixed */
+    }
+
+    .hero-content {
+        width: 90%; /* Kast võtab mobiilis rohkem ruumi */
+        padding: 30px 20px;
+        max-width: none;
+    }
+
+    .hero h1 {
+        font-size: 32px; /* Vähendame pealkirja, et see ei läheks ekraanilt välja */
+        letter-spacing: 1px;
+    }
+
+    /* --- WHITE CONTENT SECTION RESPONSIVE --- */
+    
+    /* 1. Üldine parandus: takistame sisu väljajooksmist */
+    html, body {
+        overflow-x: hidden; /* Keelab horisontaalse kerimise */
+        width: 100%;
+    }
+
+    .content, .content-inner {
+        width: 100%;
+        max-width: 100vw; /* Sunnib kasti ekraani laiusesse */
+        padding: 20px 10px; /* Vähendame külgedel olevat tühjust */
+        margin: 0;
+        overflow: hidden;
+    }
+
+    /* 2. Pealkirjade joondamine keskele */
+    /* See sihib kõiki h1 pealkirju l-klasside sees ja mujal */
+    h1, 
+    .l1 h1, .l2 h1, .l3 h1, .l4 h1, .l5 h1, 
+    .l6 h1, .l7 h1, .l8 h1, .l9 h1, .l10 h1, .l11 h1, .l12 h1 {
+        text-align: center !important; /* Sunnib pealkirja keskele */
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0;
+        padding-right: 0;
+        display: block;
+    }
+
+    /* 3. Parandame "What's Estonia like" (t1) sektsiooni */
+    .t1 {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 20px;
+        margin: 0 auto 40px auto;
+    }
+
+    .tekst {
+        width: 100%;
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    .soo {
+        display: flex;
+        flex-direction: column; /* Reastame sisu üksteise alla */
+        align-items: center;    /* Joondame keskele */
+        justify-content: center;
+        width: 100%;            /* Ei luba laiemaks minna kui ekraan */
+        padding: 20px 10px;
+        overflow: hidden;       /* Peidab kõik, mis üle ääre läheb */
+    }
+
+    .soo img {
+        max-width: 100%;        /* Pilt ei tohi kunagi olla laiem kui ekraan */
+        height: auto;           /* Säilitab pildi proportsioonid */
+        display: block;
+        margin: 0 auto;         /* Paneb pildi täpselt keskele */
+    }
+
+    /* Kui sul on .soo sees ka muid elemente (tekst), siis sunnime need ka raamidesse */
+    .soo * {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .pilt {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .pilt img {
+        max-width: 90%; /* Et pilt ei oleks servast servani kinni */
+        height: auto;
+    }
+
+    /* 4. Kui sul on tekstil liiga suured marginid, võtame need maha */
+    .l1, .l2, .l3, .l4, .l5, .l6, .l7, .l8, .l9, .l10, .l11, .l12 {
+        margin: 0 !important;
+        width: 100% !important;
+        padding: 20px 15px;
+    }
+
+    /* IMAGE SECTION */
+    .image-section {
+        height: auto;             /* Lubab sektsioonil venida vastavalt tekstile */
+        min-height: 400px;        /* Tagab, et pilt on vähemalt nii suur */
+        background-attachment: scroll; 
+    }
+
+    /* 2. Parandame sisu paigutust kasti sees */
+    .image-overlay {
+        height: auto;             /* Lubab mustal filtril koos tekstiga venida */
+        padding: 20px;
+    }
+
+    /* 3. Teeme graafiku/teksti kasti loetavamaks */
+    .schedule {
+        width: 100%;
+        max-width: 100%;          /* Et tekst ei läheks ekraanilt välja */
+    }
+
+    .schedule p {
+        font-size: 16px;          /* Vähendame fonti, et mahuks rohkem ridu pildile */
+        line-height: 1.4;
+        margin-top: 15px;
+    }
+
+    /* 4. Videote vahed (et ülemine video ei kataks teksti) */
+    .video {
+        height: auto;           /* Eemaldab igasuguse sundkõrguse */
+        padding: 20px;          /* Lisab veidi ruumi ümber video */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Video element ise (iframe või video märgend) */
+    .video iframe, 
+    .video video {
+        width: 100%;            /* Kasutab ära ekraani laiuse... */
+        max-width: 450px;       /* ...aga ei lähe mobiilis liiga laiaks */
+        height: auto !important; /* Tühistab varasemad kõrguse määrangud */
+        aspect-ratio: 16 / 9;   /* SUNNIB video õigesse proportsiooni */
+        border-radius: 12px;    /* Teeb nurgad viisakamaks */
+    }
+
+    /* 3. INFO & VIDEO SECTIONS */
+    .info, .video {
+        padding: 20px;
+    }
+
+    /* 4. FOOTER */
+    .footer-container {
+        flex-direction: column; /* Veerud üksteise alla */
+        gap: 40px;
+        text-align: center;
+    }
+
+    .footer-content {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .contact-list li {
+        justify-content: center; /* Ikoonid ja tekst keskele */
+    }
+
+    .partner-logos {
+        flex-wrap: wrap; /* Logod mitmes reas, kui ei mahu */
+        justify-content: center;
+    }
+
+    .partner-logos img {
+        max-width: 80px; /* Vähendame logosid mobiilis */
+    }
+
+    .footer-bottom {
+        margin-top: 20px;
+        padding-top: 15px;
+    }
+}
+
+/* Eriti väiksed ekraanid (telefonid püstises asendis) */
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 26px;
+    }
+    
+    .schedule p {
+        font-size: 16px;
+    }
+}
