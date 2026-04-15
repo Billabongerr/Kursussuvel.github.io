@@ -18,7 +18,7 @@ header, nav, .navbar, .nav-links, .logo {
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif !important;
     color: #333;
 }
 
@@ -90,7 +90,7 @@ header.scrolled .navbar {
 .nav-links a {
     text-decoration: none;
     position: relative;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif !important;
     padding: 12px 14px;
     border-radius: 5px;
     color: #ffffff;
@@ -199,7 +199,7 @@ header.scrolled .navbar {
     text-decoration: none; /* Eemaldab lingi allakriipsutuse */
     padding: 12px 25px; /* Tekitab teksti ümber ruumi (üleval/all 12px, külgedel 25px) */
     font-size: 16px;
-    font-family: Arial, sans-serif; /* Võid muuta ka 'Shadows Into Light', cursive peale */
+    font-family: Arial, sans-serif !important; /* Võid muuta ka 'Shadows Into Light', cursive peale */
     font-weight: bold;
     border-radius: 8px; /* Ümarad nurgad */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Õrn vari nupu alla ruumilisuse jaoks */
@@ -342,7 +342,7 @@ header.scrolled .navbar {
 .schedule {
     color: white;
     text-align: center;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif !important;
     max-width: 1000px;
     padding: 0 20px;
 }
@@ -351,14 +351,14 @@ header.scrolled .navbar {
     margin-bottom: 5px;
     font-size: 24px;
     font-weight: 300;
-    font-family: 'Shadows Into Light', cursive;
+    font-family: 'Shadows Into Light', cursive !important;
 }
 
 .schedule h4 {
     margin-bottom: 20px;
     font-size: 18px;
     font-weight: 300;
-    font-family: 'Shadows Into Light', cursive;
+    font-family: 'Shadows Into Light', cursive !important;
 }
 
 .schedule p {
@@ -372,7 +372,7 @@ header.scrolled .navbar {
     width: 100%;
     background-color: rgb(139, 98, 73);
     padding: 20px 20px 20px 20px;
-    font-family: 'Shadows Into Light', cursive;
+    font-family: 'Shadows Into Light', cursive !important;
 }
 
 .footer-container {
