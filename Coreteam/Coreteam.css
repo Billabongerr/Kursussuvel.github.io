@@ -271,14 +271,14 @@ header.scrolled .navbar {
     margin-bottom: 5px;
     font-size: 24px;
     font-weight: 300;
-    font-family: 'Shadows Into Light', cursive !important;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif !important;
 }
 
 .schedule h4 {
     margin-bottom: 20px;
     font-size: 18px;
     font-weight: 300;
-    font-family: 'Shadows Into Light', cursive !important;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif !important;
 }
 
 .schedule p {
@@ -292,7 +292,7 @@ header.scrolled .navbar {
     width: 100%;
     background-color: rgb(139, 98, 73);
     padding: 20px 20px 20px 20px;
-    font-family: 'Shadows Into Light', cursive !important;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif !important;
 }
 
 .footer-container {
