@@ -90,7 +90,7 @@ header.scrolled .navbar {
 .nav-links a {
     text-decoration: none;
     position: relative;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif !important;
     padding: 12px 14px;
     border-radius: 5px;
     color: #ffffff;
@@ -297,7 +297,7 @@ header.scrolled .navbar {
     max-width: 600px;
     margin: 0 auto;
     font-size: 24px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif !important;
     line-height: 1.6;
 }
 
@@ -332,7 +332,7 @@ header.scrolled .navbar {
 .schedule {
     color: white;
     text-align: center;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif !important;
     max-width: 1000px;
 }
 
@@ -340,14 +340,14 @@ header.scrolled .navbar {
     margin-bottom: 5px;
     font-size: 24px;
     font-weight: 300;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif !important;
 }
 
 .schedule h4 {
     margin-bottom: 20px;
     font-size: 18px;
     font-weight: 300;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif !important;
 }
 
 .schedule p {
@@ -361,7 +361,7 @@ header.scrolled .navbar {
     width: 100%;
     background-color: rgb(139, 98, 73);
     padding: 20px 20px 20px 20px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif !important;
 }
 
 .footer-container {
