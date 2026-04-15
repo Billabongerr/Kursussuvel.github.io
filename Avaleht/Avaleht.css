@@ -158,13 +158,13 @@ header.scrolled .navbar {
     font-size: 48px;
     margin-top: 20px;
     font-weight: 300;
-    font-family: 'Shadows Into Light', cursive;
+    font-family: 'Shadows Into Light', cursive !important;
     margin-bottom: 20px;
     letter-spacing: 2px;
     text-shadow: 
         1px 1px 0px rgba(0,0,0,0.2),
         -1px -1px 0px rgba(0,0,0,0.1);
-    /*filter: url(#rough);*/
+    filter: url(#rough);
 }
 
 .hero .date {
