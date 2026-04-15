@@ -18,7 +18,7 @@ header, nav, .navbar, .nav-links, .logo {
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif !important;
     color: #333;
 }
 
@@ -90,7 +90,7 @@ header.scrolled .navbar {
 .nav-links a {
     text-decoration: none;
     position: relative;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif !important;
     padding: 12px 14px;
     border-radius: 5px;
     color: #ffffff;
@@ -379,7 +379,7 @@ header.scrolled .navbar {
 .schedule {
     color: white;
     text-align: center;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif !important;
     max-width: 1000px;
 }
 
@@ -387,14 +387,14 @@ header.scrolled .navbar {
     margin-bottom: 5px;
     font-size: 24px;
     font-weight: 300;
-    font-family: 'Shadows Into Light', cursive;
+    font-family: 'Shadows Into Light', cursive !important;
 }
 
 .schedule h4 {
     margin-bottom: 20px;
     font-size: 18px;
     font-weight: 300;
-    font-family: 'Shadows Into Light', cursive;
+    font-family: 'Shadows Into Light', cursive !important;
 }
 
 .schedule p {
@@ -408,7 +408,7 @@ header.scrolled .navbar {
     width: 100%;
     background-color: rgb(139, 98, 73);
     padding: 20px 20px 20px 20px;
-    font-family: 'Shadows Into Light', cursive;
+    font-family: 'Shadows Into Light', cursive !important;
 }
 
 .footer-container {
