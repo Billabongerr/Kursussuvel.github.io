@@ -126,7 +126,7 @@ header.scrolled .navbar {
     position: relative;
     width: 100%;
     height: 50vh; /* Võtab kogu ekraani kõrguse */
-    background: url("/Pildid/pilt.png") center/cover no-repeat;
+    background: url("../Pildid/pilt.png") center/cover no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -236,7 +236,7 @@ header.scrolled .navbar {
 /* IMAGE SECTION (parallax style) */
 .image-section {
     height: 900px;
-    background: url("/Pildid/pilt.png") center/cover fixed no-repeat;
+    background: url("../Pildid/pilt.png") center/cover fixed no-repeat;
     position: relative;
     display: flex;
     align-items: center;
