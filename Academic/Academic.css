@@ -90,8 +90,8 @@ header.scrolled .navbar {
 .nav-links a {
     text-decoration: none;
     position: relative;
-    font-family: 'Shadows Into Light', cursive;
-    padding: 12px 19px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 12px 14px;
     border-radius: 5px;
     color: #ffffff;
     background-color: rgba(126, 49, 5, 0.404);
@@ -125,8 +125,8 @@ header.scrolled .navbar {
 .hero {
     position: relative;
     width: 100%;
-    height: 50vh; /* Võtab kogu ekraani kõrguse */
-    background: url("../Pildid/pilt.png") center/cover no-repeat;
+    height: 88vh; /* Võtab kogu ekraani kõrguse */
+    background: url("/Pildid/pilt.png") center/cover no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -147,21 +147,20 @@ header.scrolled .navbar {
     z-index: 2;
     color: white;
     text-align: center;
-    
-    /* LAHENDUS: määrame kasti laiuse, et see ei veniks tulbaks */
     width: fit-content;
     max-width: 600px; 
-    
     background-color: rgba(112, 38, 15, 0.6);
-    padding: 40px 60px;
+    padding: 20px 80px;
     border-radius: 12px;
 }
 
 .hero h1 {
-    font-size: 48px;
+    font-size: 60px;
     margin-top: 20px;
     font-weight: 300;
-    font-family: 'Shadows Into Light', cursive;
+    font-family: 'Georgia', cursive !important;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block; /* Aitab filtril paremini tekstile "kinnituda" */
     margin-bottom: 20px;
     letter-spacing: 2px;
     text-shadow: 
@@ -203,14 +202,14 @@ header.scrolled .navbar {
     max-width: 600px;
     margin: 0 auto;
     font-size: 18px;
-    font-family: 'Shadows Into Light', cursive;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     line-height: 1.6;
 }
 
 /* IMAGE SECTION (parallax style) */
 .image-section {
     height: 900px;
-    background: url("../Pildid/pilt.png") center/cover fixed no-repeat;
+    background: url("/Pildid/pilt.png") center/cover fixed no-repeat;
     position: relative;
     display: flex;
     align-items: center;
@@ -240,21 +239,20 @@ header.scrolled .navbar {
     text-align: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     max-width: 1000px;
-    padding: 0 20px;
 }
 
 .schedule h3 {
     margin-bottom: 5px;
     font-size: 24px;
     font-weight: 300;
-    font-family: 'Shadows Into Light', cursive;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .schedule h4 {
     margin-bottom: 20px;
     font-size: 18px;
     font-weight: 300;
-    font-family: 'Shadows Into Light', cursive;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .schedule p {
@@ -268,7 +266,7 @@ header.scrolled .navbar {
     width: 100%;
     background-color: rgb(139, 98, 73);
     padding: 20px 20px 20px 20px;
-    font-family: 'Shadows Into Light', cursive;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .footer-container {
