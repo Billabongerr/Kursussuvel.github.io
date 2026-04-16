@@ -583,9 +583,15 @@ header.scrolled .navbar {
    RESPONSIVE KÕIKIDELE MOBIILIVAADETELE 
    ========================================= */
 @media (max-width: 768px) {
+    
+    .columns {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
         /* HERO SECTION */
     .hero {
-        height: 60vh; /* Muudame kõrguse mobiilis veidi suuremaks, et tekst mahuks ära */
+        height: 100vh; /* Muudame kõrguse mobiilis veidi suuremaks, et tekst mahuks ära */
         background-attachment: scroll; /* Mobiilis on scroll sujuvam kui fixed */
     }
 
