@@ -506,8 +506,14 @@ header.scrolled .navbar {
         gap: 40px;
     }
 
+    .hero {
+        height: 100vh; /* Muudame kõrguse mobiilis veidi suuremaks, et tekst mahuks ära */
+        background-attachment: scroll; /* Mobiilis on scroll sujuvam kui fixed */
+    }
+
     .hero h1 {
         font-size: 32px;
+        letter-spacing: 1px;
     }
 
     /* --- WHITE CONTENT SECTION --- */
