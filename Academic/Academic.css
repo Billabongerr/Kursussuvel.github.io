@@ -578,3 +578,39 @@ header.scrolled .navbar {
         font-size: 16px;
     }
 }
+
+/* PARANDUS KÜLILIVAATELE (LANDSCAPE) */
+@media (max-height: 500px) and (orientation: landscape) {
+    
+    /* Hero sektsioon ei tohiks võtta tervet ekraani, muidu ei saa kerida */
+    .hero {
+        height: auto;
+        min-height: 100vh;
+        padding: 80px 0; /* Lisab ruumi üles ja alla, et tekst ei lämbuks */
+    }
+
+    .hero-content {
+        padding: 20px 40px;
+    }
+
+    .hero h1 {
+        font-size: 32px !important; /* Vähendame teksti, et see mahuks ära */
+        margin-top: 10px;
+    }
+
+    .content-inner {
+        padding: 30px;
+    }
+
+    /* Image section parallax (pilt2.jpg) ei tööta hästi madalal ekraanil */
+    .image-section {
+        height: auto;
+        min-height: 100vh;
+        background-attachment: scroll; /* Fixid pilt on madalal ekraanil segadusttekitav */
+    }
+
+    .schedule p {
+        font-size: 18px;
+        line-height: 1.2;
+    }
+}
