@@ -301,6 +301,21 @@ header.scrolled .navbar {
     line-height: 1.6;
 }
 
+.map-container {
+    margin-top: 30px; /* Jätab tekstist veidi ruumi */
+    width: 100%;
+    overflow: hidden;
+    border-radius: 12px; /* Teeb nurgad ümaraks, et ühtiks ülejäänud disainiga */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Lisab õrna varju */
+}
+
+.map-container iframe {
+    width: 100%; /* Paneb kaardi täitma kogu konteineri laiust */
+    height: 300px; /* Saad kõrgust siit muuta vastavalt vabale ruumile */
+    border: none;
+    display: block;
+}
+
 /* IMAGE SECTION (parallax style) */
 .image-section {
     height: 900px;
