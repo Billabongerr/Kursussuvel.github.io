@@ -482,7 +482,7 @@ header.scrolled .navbar {
 
         /* 1. HERO SECTION */
     .hero {
-        height: 60vh; /* Muudame kõrguse mobiilis veidi suuremaks, et tekst mahuks ära */
+        height: 100vh; /* Muudame kõrguse mobiilis veidi suuremaks, et tekst mahuks ära */
         background-attachment: scroll; /* Mobiilis on scroll sujuvam kui fixed */
     }
 
