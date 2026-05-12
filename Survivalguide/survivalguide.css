@@ -223,7 +223,7 @@ header.scrolled .navbar {
 }
 
 /* Ühised stiilid kõigile .l-klassidele loetavuse ja korduste vältimiseks */
-.l1, .l2, .l3, .l4, .l5, .l6, .l7, .l8, .l9, .l10, .l11, .l12, .l13 {
+.l1, .l2, .l3, .l4, .l5, .l6, .l7, .l8, .l9, .l10, .l11, .l12 {
     max-width: 1000px;
     margin: 0 auto;
     padding: 30px 20px;
