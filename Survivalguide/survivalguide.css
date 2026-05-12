@@ -273,6 +273,14 @@ header.scrolled .navbar {
     margin: 0 auto;
 }
 
+.l13 p {
+    text-align: center;
+    line-height: 1.6;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-top: 5px;
+}
+
 .l5 p, .l6 p, .l7 p, .l8 p, .l9 p, .l10 p, .l11 p {
     text-align: left;
     line-height: 1.6;
