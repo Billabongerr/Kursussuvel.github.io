@@ -230,7 +230,9 @@ header.scrolled .navbar {
 }
 
 .l13 {
-    padding-top: 10px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 10px 20px;
 }
 
 .l1 h1, .l2 h1, .l3 h1, .l12 h1, .l13 h1 {
